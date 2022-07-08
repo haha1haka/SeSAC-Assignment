@@ -9,8 +9,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    
     @IBOutlet var mainView: UIView!
+    
     @IBOutlet weak var mainLabel: UILabel!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -28,54 +28,18 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        completeTextField()
     }
+    
     func configure() {
         mainLabel.text = "HWAKFLIX"
+        
         mainView.backgroundColor = UIColor.black
+        
         mainLabel.textColor = .red
         mainLabel.font = UIFont.systemFont(ofSize: 32, weight: .heavy)
         mainLabel.textAlignment = .center
-        
-        emailTextField.backgroundColor = UIColor.darkGray
-        emailTextField.keyboardType = UIKeyboardType.emailAddress
-        emailTextField.placeholder = "이메일을 주고 또는 전화번호"
-        emailTextField.font = .systemFont(ofSize: 14, weight: .bold)
-        emailTextField.setPlaceholder(color: .systemGray3)
-        emailTextField.textAlignment = .center
-        emailTextField.textColor = UIColor.white
-        
-        secretTextField.backgroundColor = UIColor.darkGray
-        secretTextField.keyboardType = UIKeyboardType.numberPad
-        secretTextField.placeholder = "비밀번호"
-        secretTextField.font = .systemFont(ofSize: 14, weight: .bold)
-        secretTextField.setPlaceholder(color: .systemGray3)
-        secretTextField.textAlignment = .center
-        secretTextField.textColor = UIColor.white
-        
-        nickNameTextField.backgroundColor = UIColor.darkGray
-        nickNameTextField.keyboardType = UIKeyboardType.default
-        nickNameTextField.placeholder = "닉네임"
-        nickNameTextField.font = .systemFont(ofSize: 14, weight: .bold)
-        nickNameTextField.setPlaceholder(color: .systemGray3)
-        nickNameTextField.textAlignment = .center
-        nickNameTextField.textColor = UIColor.white
-        
-        localTextField.backgroundColor = UIColor.darkGray
-        localTextField.keyboardType = UIKeyboardType.default
-        localTextField.placeholder = "위치"
-        localTextField.font = .systemFont(ofSize: 14, weight: .bold)
-        localTextField.setPlaceholder(color: .systemGray3)
-        localTextField.textAlignment = .center
-        localTextField.textColor = UIColor.white
-        
-        codeTextField.backgroundColor = UIColor.darkGray
-        codeTextField.keyboardType = UIKeyboardType.numberPad
-        codeTextField.placeholder = "추천 코드 입력"
-        codeTextField.font = .systemFont(ofSize: 14, weight: .bold)
-        codeTextField.setPlaceholder(color: .systemGray3)
-        codeTextField.textAlignment = .center
-        codeTextField.textColor = UIColor.white
-        
+
         signUpButton.backgroundColor = UIColor.white
         signUpButton.setTitle("회원가입", for: .normal)
         signUpButton.setTitleColor(.red, for: .normal)
@@ -84,7 +48,6 @@ class SignUpViewController: UIViewController {
         signUpButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .heavy)
         signUpButton.layer.cornerRadius = 8
 
-        
         infoButton.tintColor = .systemGray3
         infoButton.setTitle("추가정보 입력", for: .normal)
         
@@ -92,14 +55,24 @@ class SignUpViewController: UIViewController {
         mySwitch.thumbTintColor = .white
         mySwitch.backgroundColor = .blue
         mySwitch.layer.cornerRadius = mySwitch.bounds.size.height / 2
-//        mySwitch.layer.masksToBounds = false
+
     }
     
-    
-    @IBAction func signUpActionButton(_ sender: Any) {
-        if emailTextField.text != nil {
-            
-        }
+    func configureTextField(textField: UITextField, name: String, keyBoardStyle: UIKeyboardType) {
+        textField.backgroundColor = UIColor.darkGray
+        textField.keyboardType = keyBoardStyle
+        textField.placeholder = "\(name)"
+        textField.font = .systemFont(ofSize: 14, weight: .bold)
+        textField.setPlaceholder(color: .systemGray3)
+        textField.textAlignment = .center
+        textField.textColor = UIColor.white
+    }
+    func completeTextField() {
+        configureTextField(textField: emailTextField, name: "이메일을 주고 또는 전화번호", keyBoardStyle: .emailAddress)
+        configureTextField(textField: secretTextField, name: "비밀번호", keyBoardStyle: .numberPad)
+        configureTextField(textField: nickNameTextField, name: "닉네임", keyBoardStyle: .default)
+        configureTextField(textField: localTextField, name: "위치", keyBoardStyle: .default)
+        configureTextField(textField: codeTextField, name: "추천 코드 입력", keyBoardStyle: .numberPad)
     }
     
     @IBAction func transPlaform(_ sender: Any) {
@@ -129,31 +102,8 @@ class SignUpViewController: UIViewController {
     @IBAction func gestureSignUpButton(_ sender: Any) {
         view.endEditing(true)
     }
-    
-    
-    // MARK: 키보드 내려가게 하기
-    //1)gesture Action 연결
-
-
-//    //2)각각의 textField 의 Action Event 를 DidEndOnExit 으로 하면 return 누를시 자동으로 내력감
-//    @IBAction func actionTextField(_ sender: Any) {
-//    }
-    
-    //3)UIResponder 매서드로 RisrstResponde 지정⭐️
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        passwordTextField.resignFirstResponder()
-//        nickNameTextField.resignFirstResponder()
-//    }
-//
-    //4) UITextFieldDelegate의 textFieldShouldReturn 매서드 이용
-    // MARK: view isHedden
-
-    
-    
-    
-    
-    
 }
+
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
