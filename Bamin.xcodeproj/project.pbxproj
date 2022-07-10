@@ -15,6 +15,7 @@
 		F4AF0F45287705BB00429C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AF0F44287705BB00429C23 /* Assets.xcassets */; };
 		F4AF0F48287705BB00429C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AF0F46287705BB00429C23 /* LaunchScreen.storyboard */; };
 		F4AF0F5028770C5900429C23 /* NeflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0F4F28770C5900429C23 /* NeflixViewController.swift */; };
+		F4E3FA95287B095000B39622 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3FA94287B095000B39622 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F4AF0F44287705BB00429C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4AF0F47287705BB00429C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4AF0F4F28770C5900429C23 /* NeflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeflixViewController.swift; sourceTree = "<group>"; };
+		F4E3FA94287B095000B39622 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				F4AF0F3F287705BB00429C23 /* ViewController.swift */,
 				F4AF0F41287705BB00429C23 /* Main.storyboard */,
 				F4AF0F4F28770C5900429C23 /* NeflixViewController.swift */,
+				F4E3FA94287B095000B39622 /* PlayerViewController.swift */,
 				F43A4F952877B5D80033FB0C /* Github.swift */,
 				F4AF0F44287705BB00429C23 /* Assets.xcassets */,
 				F4AF0F46287705BB00429C23 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				F43A4F962877B5D80033FB0C /* Github.swift in Sources */,
 				F4AF0F5028770C5900429C23 /* NeflixViewController.swift in Sources */,
 				F4AF0F3E287705BB00429C23 /* SceneDelegate.swift in Sources */,
+				F4E3FA95287B095000B39622 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
