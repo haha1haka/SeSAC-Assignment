@@ -31,7 +31,7 @@ class NeflixViewController: UIViewController {
     }
     
     func makeUI(image: UIImageView) {
-        image.layer.cornerRadius = 60
+        image.layer.cornerRadius = 61
         image.clipsToBounds = true
         image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.gray.cgColor
