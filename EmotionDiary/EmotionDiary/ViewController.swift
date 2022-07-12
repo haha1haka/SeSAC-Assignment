@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var titleArray: [String] = [
                                 "짜증나", "짜증나", "사랑해",
                                 "행복해","속상해", "싸랑해",
-                                "안도해", "당황해", "속상해"
+                                "안도해", "당황해", "속싱해"
                                 ]
     
     @IBOutlet var labelCollections: [UILabel]!
