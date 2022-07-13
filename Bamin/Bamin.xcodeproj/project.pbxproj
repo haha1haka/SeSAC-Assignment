@@ -20,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		F43A4F952877B5D80033FB0C /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
-		F43A4F992877D8930033FB0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ../../../../../../.Trash/Info.plist; sourceTree = "<group>"; };
 		F4AF0F38287705BB00429C23 /* Bamin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bamin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AF0F3B287705BB00429C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AF0F3D287705BB00429C23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 				F43A4F952877B5D80033FB0C /* Github.swift */,
 				F4AF0F44287705BB00429C23 /* Assets.xcassets */,
 				F4AF0F46287705BB00429C23 /* LaunchScreen.storyboard */,
-				F43A4F992877D8930033FB0C /* Info.plist */,
 			);
 			path = Week1_NetflixAndBamin;
 			sourceTree = "<group>";
