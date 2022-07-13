@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4627122287E9A3100CE189B /* AnniversaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4627121287E9A3100CE189B /* AnniversaryViewController.swift */; };
 		F4C6CE8E287C3AEC00A04543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C6CE8D287C3AEC00A04543 /* AppDelegate.swift */; };
 		F4C6CE90287C3AEC00A04543 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C6CE8F287C3AEC00A04543 /* SceneDelegate.swift */; };
 		F4C6CE92287C3AEC00A04543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C6CE91287C3AEC00A04543 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4627121287E9A3100CE189B /* AnniversaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryViewController.swift; sourceTree = "<group>"; };
 		F4C6CE8A287C3AEC00A04543 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C6CE8D287C3AEC00A04543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C6CE8F287C3AEC00A04543 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				F4C6CE8F287C3AEC00A04543 /* SceneDelegate.swift */,
 				F4C6CE91287C3AEC00A04543 /* ViewController.swift */,
 				F4C6CE93287C3AEC00A04543 /* Main.storyboard */,
+				F4627121287E9A3100CE189B /* AnniversaryViewController.swift */,
 				F4C6CE96287C3AED00A04543 /* Assets.xcassets */,
 				F4C6CE98287C3AED00A04543 /* LaunchScreen.storyboard */,
 				F4C6CE9B287C3AED00A04543 /* Info.plist */,
@@ -141,6 +144,7 @@
 				F4C6CE92287C3AEC00A04543 /* ViewController.swift in Sources */,
 				F4C6CE8E287C3AEC00A04543 /* AppDelegate.swift in Sources */,
 				F4C6CE90287C3AEC00A04543 /* SceneDelegate.swift in Sources */,
+				F4627122287E9A3100CE189B /* AnniversaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
