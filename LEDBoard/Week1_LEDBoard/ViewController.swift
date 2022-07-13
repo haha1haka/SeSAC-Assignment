@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func configureUI() {
-        mainTextField.placeholder = "내용을 입력해 주세요"
+        mainTextField.placeholder = "내용을 입력해 주세요!"
         mainTextField.textColor = UIColor.white
         mainTextField.setPlaceholder(color: .systemGray3)
         
