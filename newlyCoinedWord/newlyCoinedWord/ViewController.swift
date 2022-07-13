@@ -33,19 +33,34 @@ class ViewController: UIViewController {
                                    "어쩔티비":"어쩌라고 가서 TV나 봐라",
                                    "좀좀따리":"아주 조금씩 적고 하찮은 양을 모으는 모습"
                                   ]
-
+    
+    var deduplicatedKeySet: Set = Set<String>()
+    
+     ///버튼에 key 값 중복 안되기 하기 위한 함수.
+    func deduplicationKey() {
+        var flag = true
+        while flag {
+            let element = words.randomElement()!.key
+            if !deduplicatedKeySet.contains(element) {
+                deduplicatedKeySet.insert(element)
+            }
+            if deduplicatedKeySet.count == 4 {
+                flag = false
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        deduplicationKey() // 버튼에 key 값 중복 안되기 하기 위한 함수.
+        
         configureTextFieldViewUI()
         configureSearchButtonUI()
         configureResultLabelUI()
         
         configureButtonUI(button1, word: words)
-        //⁉️ 왜 이렇게 하면, 삭제가 안되는지?
-//        words["\(String(describing: button1.titleLabel?.text))"] = nil
-//        print("1 - \(words)")
         configureButtonUI(button2, word: words)
-//        print("2 - \(words)")
         configureButtonUI(button3, word: words)
         configureButtonUI(button4, word: words)
         
@@ -75,8 +90,7 @@ class ViewController: UIViewController {
         button.layer.masksToBounds = true
         button.tintColor = .black
         
-        button.setTitle(words.keys.randomElement()!, for: .normal)
-        //⁉️ buttontitle의 이름을 다 다르게 해주자
+        button.setTitle(deduplicatedKeySet.removeFirst(), for: .normal)
     }
     
     @IBAction func tappedgesture(_ sender: Any) {
@@ -94,7 +108,6 @@ class ViewController: UIViewController {
             //내생각: "Optional("군싹")" -> 이걸 words 의 value 로 찾으니깐, 없는거지.
             //근데 그럼 nil 이라고 label 에 나와야 되는거 아닌가?
             resultLabel.text = words["\(mainTextField.text!)"]
-            words.removeValue(forKey: "\(mainTextField.text!)")
             resultLabel.textColor = .black
             resultLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         } else {
@@ -116,8 +129,6 @@ class ViewController: UIViewController {
     @IBAction func buttonCliecked(_ sender: UIButton) {
         mainTextField.text = sender.currentTitle
     }
-    
-    
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -127,5 +138,8 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-
+// ✅ key값 중복 되는 문제
+// "왜 옵셔널 안취해 주면 레이블에 안나오지" 이부분 해결하기
+// ❌ 다른분들꺼 코드 참고해보기
+// ❌2가지 방법 정도 더 refectoring 해보기
 
