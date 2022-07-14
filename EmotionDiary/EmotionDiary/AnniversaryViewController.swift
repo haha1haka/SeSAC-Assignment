@@ -12,29 +12,39 @@ class AnniversaryViewController: UIViewController {
     @IBOutlet weak var datePickerView: UIDatePicker!
     @IBOutlet var uiViewCollections: [UIView]!
     @IBOutlet var imageViewCollections: [UIImageView]!
-    @IBOutlet weak var testLabel: UILabel!
-
-    @IBOutlet weak var later100Label: UILabel!
-    @IBOutlet weak var later200Label: UILabel!
-    @IBOutlet weak var later300Label: UILabel!
-    @IBOutlet weak var later400Label: UILabel!
+    @IBOutlet var dateLabelCollections: [UILabel]!
+    @IBOutlet weak var dummyLabel: UILabel!
     
     var nowDate: Date?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureUI()
-        datePickerViewAction(datePickerView)
+    var formatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        
+        return formatter
     }
     
-    func configureUI() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        configureDatePicker()
+        configureImageView()
+        configureContainerView()
+        
+        datePickerViewAction(datePickerView)
+    }
+
+    func configureDatePicker() {
         datePickerView.preferredDatePickerStyle = .wheels
         datePickerView.datePickerMode = .date
-        
+    }
+    
+    func configureImageView() {
         imageViewCollections.forEach{$0.layer.cornerRadius = 25}
         imageViewCollections.forEach{$0.layer.masksToBounds = true }
-
+    }
+    
+    func configureContainerView() {
         uiViewCollections.forEach{$0.layer.shadowColor = UIColor.black.cgColor}
         uiViewCollections.forEach{$0.layer.cornerRadius = 25}
         uiViewCollections.forEach{$0.layer.shadowOffset = .zero}
@@ -43,38 +53,23 @@ class AnniversaryViewController: UIViewController {
         uiViewCollections.forEach{$0.layer.masksToBounds = false }
     }
     
-    @IBAction func datePickerViewAction(_ sender: Any) {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateStyle = .full
-        generateAndApplyDate(formatter)
-        make100Date(formatter)
-        make200Date(formatter)
-        make300Date(formatter)
-        make400Date(formatter)
+    @IBAction func datePickerViewAction(_ sender: UIDatePicker) {
+        updateDateInDummyLabel(formatter)
+        updateDateInDateLabel(formatter, plusDay: 100)
+        updateDateInDateLabel(formatter, plusDay: 200)
+        updateDateInDateLabel(formatter, plusDay: 300)
+        updateDateInDateLabel(formatter, plusDay: 400)
     }
     
-    func generateAndApplyDate(_ formatter: DateFormatter) {
+    func updateDateInDummyLabel(_ formatter: DateFormatter) {
         nowDate = datePickerView.date
-        testLabel.text = formatter.string(from: nowDate!)
-    }
-    func make100Date(_ formatter: DateFormatter) {
-        nowDate = datePickerView.date + 86400*100
-        later100Label.text = formatter.string(from: nowDate!)
-    }
-    func make200Date(_ formatter: DateFormatter) {
-        nowDate = datePickerView.date + 86400*200
-        later200Label.text = formatter.string(from: nowDate!)
-    }
-    func make300Date(_ formatter: DateFormatter) {
-        nowDate = datePickerView.date + 86400*300
-        later300Label.text = formatter.string(from: nowDate!)
-    }
-    func make400Date(_ formatter: DateFormatter) {
-        nowDate = datePickerView.date + 86400*400
-        later400Label.text = formatter.string(from: nowDate!)
+        dummyLabel.text = formatter.string(from: nowDate!)
     }
     
+    func updateDateInDateLabel(_ formatter: DateFormatter, plusDay: Double) {
+        nowDate = datePickerView.date + 86400 * plusDay
+        dateLabelCollections[(Int(plusDay) / 100)-1].text = formatter.string(from: nowDate!)
+    }
 }
 
 

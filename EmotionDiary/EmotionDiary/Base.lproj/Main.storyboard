@@ -361,7 +361,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년         03월 27일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFW-He-28w">
                                                         <rect key="frame" x="28" y="56.5" width="100" height="43"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgq-kM-US3">
@@ -397,7 +397,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년         03월 27일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kem-GJ-E1Y">
                                                         <rect key="frame" x="28" y="56.5" width="100" height="43"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn2-e8-HHW">
@@ -441,7 +441,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년         03월 27일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tG-jF-okj">
                                                         <rect key="frame" x="28" y="56.5" width="100" height="43"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-Ka-jmM">
@@ -477,7 +477,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년         03월 27일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-o8-BPs">
                                                         <rect key="frame" x="28" y="56.5" width="100" height="43"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orN-NU-eaD">
@@ -535,11 +535,7 @@
                     </view>
                     <connections>
                         <outlet property="datePickerView" destination="YcJ-S8-NyT" id="itL-Yh-o00"/>
-                        <outlet property="later100Label" destination="xFW-He-28w" id="fmt-PQ-h1O"/>
-                        <outlet property="later200Label" destination="Kem-GJ-E1Y" id="aZC-il-1wz"/>
-                        <outlet property="later300Label" destination="7tG-jF-okj" id="LIp-rx-K1f"/>
-                        <outlet property="later400Label" destination="nqa-o8-BPs" id="BFe-kZ-si7"/>
-                        <outlet property="testLabel" destination="icd-we-SGS" id="3rT-1D-vYO"/>
+                        <outlet property="dummyLabel" destination="icd-we-SGS" id="grV-9D-7hy"/>
                         <outletCollection property="uiViewCollections" destination="EUb-12-HYZ" collectionClass="NSMutableArray" id="cUs-Yr-aVR"/>
                         <outletCollection property="uiViewCollections" destination="Eyl-ow-LSP" collectionClass="NSMutableArray" id="N9T-BL-aS8"/>
                         <outletCollection property="uiViewCollections" destination="OPB-aQ-iUA" collectionClass="NSMutableArray" id="WB3-jL-Lw2"/>
@@ -548,11 +544,15 @@
                         <outletCollection property="imageViewCollections" destination="NA4-31-HMT" collectionClass="NSMutableArray" id="03n-kj-P6n"/>
                         <outletCollection property="imageViewCollections" destination="GwI-VE-kXf" collectionClass="NSMutableArray" id="dxu-iM-AYQ"/>
                         <outletCollection property="imageViewCollections" destination="AmA-ci-aRA" collectionClass="NSMutableArray" id="IZt-3P-Uus"/>
+                        <outletCollection property="dateLabelCollections" destination="xFW-He-28w" collectionClass="NSMutableArray" id="2AH-2h-5Si"/>
+                        <outletCollection property="dateLabelCollections" destination="Kem-GJ-E1Y" collectionClass="NSMutableArray" id="6TL-3F-Wmb"/>
+                        <outletCollection property="dateLabelCollections" destination="7tG-jF-okj" collectionClass="NSMutableArray" id="9hb-lZ-vKY"/>
+                        <outletCollection property="dateLabelCollections" destination="nqa-o8-BPs" collectionClass="NSMutableArray" id="RrL-lh-NT6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Inz-zk-eXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="-254"/>
+            <point key="canvasLocation" x="-219" y="-238"/>
         </scene>
     </scenes>
     <resources>
