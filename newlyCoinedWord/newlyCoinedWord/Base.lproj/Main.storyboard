@@ -139,14 +139,14 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="button1" destination="ph6-oc-PHg" id="E0t-bP-qrr"/>
-                        <outlet property="button2" destination="MG6-Xr-ue9" id="7vl-t1-e2t"/>
-                        <outlet property="button3" destination="WSt-Ei-Mgi" id="WjB-vZ-s3A"/>
-                        <outlet property="button4" destination="2bf-Nd-R5U" id="oTj-Yz-Nl0"/>
+                        <outlet property="containerView" destination="aHp-an-hq4" id="Lpa-CY-e3Z"/>
                         <outlet property="mainTextField" destination="2wu-ux-0OK" id="saH-CD-oGm"/>
                         <outlet property="resultLabel" destination="Jzt-Xk-tXX" id="MUq-gZ-kF8"/>
                         <outlet property="searchButton" destination="nxC-D3-COb" id="fmu-UP-esa"/>
-                        <outlet property="textFieldView" destination="aHp-an-hq4" id="yQt-kq-3x4"/>
+                        <outletCollection property="hashTagButtons" destination="ph6-oc-PHg" collectionClass="NSMutableArray" id="znG-r1-ihZ"/>
+                        <outletCollection property="hashTagButtons" destination="MG6-Xr-ue9" collectionClass="NSMutableArray" id="ple-3n-WpR"/>
+                        <outletCollection property="hashTagButtons" destination="WSt-Ei-Mgi" collectionClass="NSMutableArray" id="qz4-lD-5W3"/>
+                        <outletCollection property="hashTagButtons" destination="2bf-Nd-R5U" collectionClass="NSMutableArray" id="6Mz-rC-5N2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -156,7 +156,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-720" y="-271"/>
+            <point key="canvasLocation" x="-1016" y="-398"/>
         </scene>
     </scenes>
     <resources>

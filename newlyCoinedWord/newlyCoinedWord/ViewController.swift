@@ -9,17 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textFieldView: UIView!
-    
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainTextField: UITextField!
-    
     @IBOutlet weak var searchButton: UIButton!
-    
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
-    
+    @IBOutlet var hashTagButtons: [UIButton]!
     @IBOutlet weak var resultLabel: UILabel!
     
     var words: [String: String] = ["억텐":"억지 텐션",
@@ -52,45 +45,40 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         deduplicationKey() // 버튼에 key 값 중복 안되기 하기 위한 함수.
         
-        configureTextFieldViewUI()
-        configureSearchButtonUI()
-        configureResultLabelUI()
-        
-        configureButtonUI(button1, word: words)
-        configureButtonUI(button2, word: words)
-        configureButtonUI(button3, word: words)
-        configureButtonUI(button4, word: words)
+        configureContainerView()
+        configureSearchButton()
+        configureResultLabel()
+        configurehashTagButtons()
         
         self.mainTextField.delegate = self
     }
     
-    func configureTextFieldViewUI() {
-        textFieldView.layer.borderColor = UIColor.black.cgColor
-        textFieldView.layer.borderWidth = 3
+    func configureContainerView() {
+        containerView.layer.borderColor = UIColor.black.cgColor
+        containerView.layer.borderWidth = 3
     }
     
-    func configureSearchButtonUI() {
+    func configureSearchButton() {
         searchButton.backgroundColor = .black
         searchButton.tintColor = .white
     }
     
-    func configureResultLabelUI() {
+    func configureResultLabel() {
         resultLabel.textColor = .black
         resultLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         resultLabel.text = "신조어 검색기!"
     }
     
-    func configureButtonUI(_ button: UIButton, word: [String: String]) {
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.cornerRadius = 8
-        button.layer.masksToBounds = true
-        button.tintColor = .black
-        
-        button.setTitle(deduplicatedKeySet.removeFirst(), for: .normal)
+    func configurehashTagButtons() {
+        hashTagButtons.forEach{ $0.layer.borderWidth = 1 }
+        hashTagButtons.forEach{ $0.layer.borderColor = UIColor.black.cgColor }
+        hashTagButtons.forEach{ $0.layer.cornerRadius = 8 }
+        hashTagButtons.forEach{ $0.layer.masksToBounds = true }
+        hashTagButtons.forEach{ $0.tintColor = .black }
+        hashTagButtons.forEach{ $0.setTitle(deduplicatedKeySet.removeFirst(), for: .normal) }
     }
     
     @IBAction func tappedgesture(_ sender: Any) {
@@ -104,16 +92,13 @@ class ViewController: UIViewController {
     
     func makeNewlyCoinedWord() {
         if findValue() {
-            //⁉️ 왜 옵셔널 안취해 주면 레이블에 안나오지?
-            //내생각: "Optional("군싹")" -> 이걸 words 의 value 로 찾으니깐, 없는거지.
-            //근데 그럼 nil 이라고 label 에 나와야 되는거 아닌가?
             resultLabel.text = words["\(mainTextField.text!)"]
             resultLabel.textColor = .black
             resultLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         } else {
+            resultLabel.text = "\(mainTextField.text!) 는 신조어 아닌데..혹시..틀딱 이세영...?"
             resultLabel.textColor = .darkGray
             resultLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-            resultLabel.text = "\(mainTextField.text!) 는 신조어 아닌데..혹시..틀딱 이세영...?"
         }
     }
     
@@ -139,7 +124,6 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 // ✅ key값 중복 되는 문제
-// "왜 옵셔널 안취해 주면 레이블에 안나오지" 이부분 해결하기
-// ❌ 다른분들꺼 코드 참고해보기
-// ❌2가지 방법 정도 더 refectoring 해보기
+// ✅"왜 옵셔널 안취해 주면 레이블에 안나오지" 이부분 해결하기
+// ✅ 다른분들꺼 코드 참고해보기
 
