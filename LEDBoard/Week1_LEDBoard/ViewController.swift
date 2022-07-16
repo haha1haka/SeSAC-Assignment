@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var textFieldView: UIView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainTextField: UITextField!
     
     @IBOutlet weak var sendButton: UIButton!
@@ -59,8 +59,6 @@ class ViewController: UIViewController {
         resultLabel.textColor = colorArray.randomElement()!
     }
     
-    
-    
     @IBAction func didEndOnExitTextField(_ sender: Any) {
         print(#function)
     }
@@ -70,7 +68,7 @@ class ViewController: UIViewController {
             self.view.endEditing(true)
             return
         } else {
-            textFieldView.isHidden.toggle()
+            containerView.isHidden.toggle()
         }
     }
 }
@@ -82,6 +80,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
+
 extension UITextField {
     func setPlaceholder(color: UIColor) {
         guard let string = self.placeholder else {

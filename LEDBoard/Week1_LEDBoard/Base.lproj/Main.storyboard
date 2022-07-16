@@ -94,11 +94,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="dFa-n8-2dJ" id="ogM-yh-eLh"/>
                         <outlet property="mainTextField" destination="MoZ-Vk-9eT" id="NXh-sA-BcC"/>
                         <outlet property="resultLabel" destination="sal-CB-3Ny" id="wox-F9-THW"/>
                         <outlet property="sendButton" destination="3BP-6i-sfv" id="2DD-9K-KLi"/>
                         <outlet property="textColorButton" destination="0AX-uV-hms" id="qUd-w9-6gq"/>
-                        <outlet property="textFieldView" destination="dFa-n8-2dJ" id="55U-fM-G98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
