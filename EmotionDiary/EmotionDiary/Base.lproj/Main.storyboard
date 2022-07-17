@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jov-67-vdo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -340,14 +341,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="YcJ-S8-NyT">
-                                <rect key="frame" x="0.0" y="69" width="414" height="300"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="YcJ-S8-NyT">
+                                <rect key="frame" x="0.0" y="60" width="414" height="409"/>
                                 <connections>
                                     <action selector="datePickerViewAction:" destination="jov-67-vdo" eventType="valueChanged" id="Gwc-yf-cLJ"/>
                                 </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BuU-Fo-b7H">
-                                <rect key="frame" x="43.5" y="419" width="327" height="327"/>
+                                <rect key="frame" x="43.5" y="519" width="327" height="327"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tnk-WS-C8k">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="156"/>
@@ -512,7 +513,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icd-we-SGS">
-                                <rect key="frame" x="0.0" y="369" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="469" width="414" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -525,11 +526,11 @@
                             <constraint firstItem="icd-we-SGS" firstAttribute="leading" secondItem="ZSn-WD-GuR" secondAttribute="leading" id="KxU-lN-uSO"/>
                             <constraint firstItem="BuU-Fo-b7H" firstAttribute="top" secondItem="YcJ-S8-NyT" secondAttribute="bottom" constant="50" id="ZPx-O0-lsi"/>
                             <constraint firstItem="ZSn-WD-GuR" firstAttribute="trailing" secondItem="icd-we-SGS" secondAttribute="trailing" id="bit-Fl-fGR"/>
+                            <constraint firstItem="ZSn-WD-GuR" firstAttribute="bottom" secondItem="BuU-Fo-b7H" secondAttribute="bottom" constant="16" id="c8f-vX-8JW"/>
                             <constraint firstItem="ZSn-WD-GuR" firstAttribute="trailing" secondItem="YcJ-S8-NyT" secondAttribute="trailing" id="dUN-4A-HbZ"/>
                             <constraint firstItem="YcJ-S8-NyT" firstAttribute="leading" secondItem="ZSn-WD-GuR" secondAttribute="leading" id="jMu-Wb-MQB"/>
-                            <constraint firstItem="BuU-Fo-b7H" firstAttribute="centerY" secondItem="xo5-BA-yPS" secondAttribute="centerY" multiplier="1.3" id="mSW-xl-Anu"/>
                             <constraint firstItem="icd-we-SGS" firstAttribute="top" secondItem="YcJ-S8-NyT" secondAttribute="bottom" id="ncM-gd-NE8"/>
-                            <constraint firstItem="YcJ-S8-NyT" firstAttribute="top" secondItem="ZSn-WD-GuR" secondAttribute="top" constant="25" id="rRn-31-0h1"/>
+                            <constraint firstItem="YcJ-S8-NyT" firstAttribute="top" secondItem="ZSn-WD-GuR" secondAttribute="top" constant="16" id="rRn-31-0h1"/>
                             <constraint firstItem="BuU-Fo-b7H" firstAttribute="top" secondItem="icd-we-SGS" secondAttribute="bottom" id="xF2-Ws-GHt"/>
                         </constraints>
                     </view>
