@@ -15,6 +15,7 @@
 		F46001572884DDE400D4B1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46001552884DDE400D4B1F2 /* LaunchScreen.storyboard */; };
 		F460015F2884F11500D4B1F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F460015E2884F11500D4B1F2 /* Home.storyboard */; };
 		F46001612884FE4200D4B1F2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46001602884FE4200D4B1F2 /* HomeTableViewController.swift */; };
+		F49CCC2828853A5D00C1C5C8 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49CCC2728853A5D00C1C5C8 /* SettingTableViewController.swift */; };
 		F4CC13C128852C880034EDA7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CC13C028852C880034EDA7 /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		F46001582884DDE400D4B1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F460015E2884F11500D4B1F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F46001602884FE4200D4B1F2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		F49CCC2728853A5D00C1C5C8 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingTableViewController.swift; path = TrendMedia/ViewControllers/SettingTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		F4CC13C028852C880034EDA7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			children = (
 				F460014E2884DDE200D4B1F2 /* ViewController.swift */,
 				F46001602884FE4200D4B1F2 /* HomeTableViewController.swift */,
+				F49CCC2728853A5D00C1C5C8 /* SettingTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				F460014F2884DDE200D4B1F2 /* ViewController.swift in Sources */,
 				F460014B2884DDE200D4B1F2 /* AppDelegate.swift in Sources */,
 				F460014D2884DDE200D4B1F2 /* SceneDelegate.swift in Sources */,
+				F49CCC2828853A5D00C1C5C8 /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
