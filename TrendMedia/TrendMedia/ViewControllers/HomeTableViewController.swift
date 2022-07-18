@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController {
     
     var birthdayFriends: [String] = ["뽀로로", "신데렐라", "울라프","스노기","모구리","고래밥"]
     
@@ -69,7 +69,7 @@ class SettingTableViewController: UITableViewController {
     }
 }
 
-extension SettingTableViewController {
+extension HomeTableViewController {
     //0. 섹션의 갯수(t옵션)
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 5
