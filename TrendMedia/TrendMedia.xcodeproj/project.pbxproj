@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42CA2E92887039E00D137EF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CA2E82887039E00D137EF /* SearchTableViewCell.swift */; };
+		F42CA2EB288705D100D137EF /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CA2EA288705D100D137EF /* SearchTableViewController.swift */; };
 		F437362D2886404400B8F76C /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F437362C2886404400B8F76C /* Trend.storyboard */; };
 		F437362F2886407A00B8F76C /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F437362E2886407A00B8F76C /* Intro.storyboard */; };
 		F4373631288643FA00B8F76C /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4373630288643FA00B8F76C /* TrendViewController.swift */; };
-		F43736332886440C00B8F76C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43736322886440C00B8F76C /* SearchViewController.swift */; };
 		F43736352886453000B8F76C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43736342886453000B8F76C /* UIViewController+Extension.swift */; };
 		F43736372886479C00B8F76C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43736362886479C00B8F76C /* UITextField+Extension.swift */; };
 		F437363928864BAE00B8F76C /* BucketlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437363828864BAE00B8F76C /* BucketlistTableViewController.swift */; };
@@ -32,10 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F42CA2E82887039E00D137EF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		F42CA2EA288705D100D137EF /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		F437362C2886404400B8F76C /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
 		F437362E2886407A00B8F76C /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		F4373630288643FA00B8F76C /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
-		F43736322886440C00B8F76C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F43736342886453000B8F76C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F43736362886479C00B8F76C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		F437363828864BAE00B8F76C /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BucketlistTableViewController.swift; path = TrendMedia/Sources/Scenes/Trend/BucketlistTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F42CA2E72887037E00D137EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F42CA2E82887039E00D137EF /* SearchTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F43BCC1D288681060061E88C /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				F43BCC1E288681460061E88C /* Search.storyboard */,
-				F43736322886440C00B8F76C /* SearchViewController.swift */,
+				F42CA2EA288705D100D137EF /* SearchTableViewController.swift */,
+				F42CA2E72887037E00D137EF /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -299,9 +310,9 @@
 				F43736372886479C00B8F76C /* UITextField+Extension.swift in Sources */,
 				F43BCC2E288685550061E88C /* ShoppingTableViewCell.swift in Sources */,
 				F43BCC2B288684F70061E88C /* ShoppingTableViewController.swift in Sources */,
+				F42CA2EB288705D100D137EF /* SearchTableViewController.swift in Sources */,
 				F43736352886453000B8F76C /* UIViewController+Extension.swift in Sources */,
 				F46001612884FE4200D4B1F2 /* HomeTableViewController.swift in Sources */,
-				F43736332886440C00B8F76C /* SearchViewController.swift in Sources */,
 				F460014F2884DDE200D4B1F2 /* ViewController.swift in Sources */,
 				F460014B2884DDE200D4B1F2 /* AppDelegate.swift in Sources */,
 				F460014D2884DDE200D4B1F2 /* SceneDelegate.swift in Sources */,
@@ -309,6 +320,7 @@
 				F437363928864BAE00B8F76C /* BucketlistTableViewController.swift in Sources */,
 				F4373631288643FA00B8F76C /* TrendViewController.swift in Sources */,
 				F437363B28864D9A00B8F76C /* BucketlistTableViewCell.swift in Sources */,
+				F42CA2E92887039E00D137EF /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +472,7 @@
 				INFOPLIST_FILE = TrendMedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Shopping;
+				INFOPLIST_KEY_UIMainStoryboardFile = Search;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -489,7 +501,7 @@
 				INFOPLIST_FILE = TrendMedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Shopping;
+				INFOPLIST_KEY_UIMainStoryboardFile = Search;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

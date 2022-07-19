@@ -76,14 +76,3 @@ class ShoppingTableViewController: UITableViewController {
 }
 
 
-
-
-
-
-
-
-
-//        cell.containerView.backgroundColor = .systemGray6
-//        cell.containerView.layer.cornerRadius = 8
-
-
