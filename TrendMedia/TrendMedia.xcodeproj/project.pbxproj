@@ -17,6 +17,9 @@
 		F437363B28864D9A00B8F76C /* BucketlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437363A28864D9A00B8F76C /* BucketlistTableViewCell.swift */; };
 		F43BCC1C288680F90061E88C /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BCC1B288680F90061E88C /* SettingTableViewController.swift */; };
 		F43BCC20288681460061E88C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BCC1E288681460061E88C /* Search.storyboard */; };
+		F43BCC29288684D30061E88C /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BCC28288684D30061E88C /* Shopping.storyboard */; };
+		F43BCC2B288684F70061E88C /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BCC2A288684F70061E88C /* ShoppingTableViewController.swift */; };
+		F43BCC2E288685550061E88C /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BCC2D288685550061E88C /* ShoppingTableViewCell.swift */; };
 		F460014B2884DDE200D4B1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460014A2884DDE200D4B1F2 /* AppDelegate.swift */; };
 		F460014D2884DDE200D4B1F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460014C2884DDE200D4B1F2 /* SceneDelegate.swift */; };
 		F460014F2884DDE200D4B1F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460014E2884DDE200D4B1F2 /* ViewController.swift */; };
@@ -39,6 +42,9 @@
 		F43BCC1A288680F80061E88C /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		F43BCC1B288680F90061E88C /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		F43BCC1E288681460061E88C /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = TrendMedia/Sources/Scenes/Search/Search.storyboard; sourceTree = SOURCE_ROOT; };
+		F43BCC28288684D30061E88C /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		F43BCC2A288684F70061E88C /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		F43BCC2D288685550061E88C /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		F46001472884DDE200D4B1F2 /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F460014A2884DDE200D4B1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F460014C2884DDE200D4B1F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +123,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F43BCC27288684BA0061E88C /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				F43BCC28288684D30061E88C /* Shopping.storyboard */,
+				F43BCC2A288684F70061E88C /* ShoppingTableViewController.swift */,
+				F43BCC2C288685040061E88C /* Views */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		F43BCC2C288685040061E88C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F43BCC2D288685550061E88C /* ShoppingTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F460013E2884DDE200D4B1F2 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +213,7 @@
 				F43BCC25288682180061E88C /* Home */,
 				F43BCC1D288681060061E88C /* Setting */,
 				F4C543F728867BF50092CF89 /* Trend */,
+				F43BCC27288684BA0061E88C /* Shopping */,
 				F43BCC222886814D0061E88C /* Search */,
 			);
 			path = Scenes;
@@ -262,6 +287,7 @@
 			files = (
 				F437362D2886404400B8F76C /* Trend.storyboard in Resources */,
 				F46001572884DDE400D4B1F2 /* LaunchScreen.storyboard in Resources */,
+				F43BCC29288684D30061E88C /* Shopping.storyboard in Resources */,
 				F46001542884DDE400D4B1F2 /* Assets.xcassets in Resources */,
 				F437362F2886407A00B8F76C /* Intro.storyboard in Resources */,
 				F43BCC20288681460061E88C /* Search.storyboard in Resources */,
@@ -278,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43736372886479C00B8F76C /* UITextField+Extension.swift in Sources */,
+				F43BCC2E288685550061E88C /* ShoppingTableViewCell.swift in Sources */,
+				F43BCC2B288684F70061E88C /* ShoppingTableViewController.swift in Sources */,
 				F43736352886453000B8F76C /* UIViewController+Extension.swift in Sources */,
 				F46001612884FE4200D4B1F2 /* HomeTableViewController.swift in Sources */,
 				F43736332886440C00B8F76C /* SearchViewController.swift in Sources */,
