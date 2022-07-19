@@ -9,10 +9,6 @@ import UIKit
 
 class ShoppingTableViewCell: UITableViewCell {
     
-    
-    
-    
-    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var checkBoxButton: UIButton!
     @IBOutlet weak var contentLabel: UILabel!

@@ -11,7 +11,7 @@
         <scene sceneID="hVd-bo-y9M">
             <objects>
                 <tableViewController id="rbc-bV-C0c" customClass="ShoppingTableViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="KVF-Af-PDc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="KVF-Af-PDc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -41,6 +41,7 @@
                                     <state key="normal" title="추가"/>
                                     <connections>
                                         <action selector="addButton:" destination="70A-LU-grN" eventType="touchUpInside" id="GZp-Lg-WHt"/>
+                                        <action selector="addButtonTapped:" destination="rbc-bV-C0c" eventType="touchUpInside" id="xjC-SB-SVw"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쇼핑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-GN-cd1">
@@ -73,45 +74,45 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JF-Uq-hF5">
+                                        <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YpW-l4-YLW">
                                             <rect key="frame" x="20" y="0.0" width="374" height="95"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUW-Fb-NuZ">
-                                            <rect key="frame" x="36" y="32" width="45.5" height="31"/>
+                                            <rect key="frame" x="40" y="32" width="45.5" height="31"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="checkmark.square" catalog="system"/>
                                             <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRo-Z1-nA1">
-                                            <rect key="frame" x="97.5" y="37" width="217.5" height="21"/>
+                                            <rect key="frame" x="101.5" y="37" width="209.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWY-1u-Q14">
-                                            <rect key="frame" x="331" y="32" width="47" height="31"/>
+                                            <rect key="frame" x="327" y="32" width="47" height="31"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="uUW-Fb-NuZ" firstAttribute="leading" secondItem="3JF-Uq-hF5" secondAttribute="leading" constant="16" id="2DU-Sw-idZ"/>
                                         <constraint firstItem="LRo-Z1-nA1" firstAttribute="leading" secondItem="uUW-Fb-NuZ" secondAttribute="trailing" constant="16" id="7jn-CY-iyD"/>
-                                        <constraint firstAttribute="bottom" secondItem="3JF-Uq-hF5" secondAttribute="bottom" id="GlF-cE-iup"/>
+                                        <constraint firstAttribute="trailing" secondItem="YpW-l4-YLW" secondAttribute="trailing" constant="20" id="EQn-5A-2b8"/>
+                                        <constraint firstItem="uUW-Fb-NuZ" firstAttribute="leading" secondItem="YpW-l4-YLW" secondAttribute="leading" constant="20" id="Fet-wZ-flZ"/>
                                         <constraint firstItem="uUW-Fb-NuZ" firstAttribute="centerY" secondItem="scT-Ar-TZi" secondAttribute="centerY" id="Igt-NS-2H7"/>
                                         <constraint firstItem="WWY-1u-Q14" firstAttribute="centerY" secondItem="uUW-Fb-NuZ" secondAttribute="centerY" id="PAj-IJ-KdI"/>
-                                        <constraint firstAttribute="trailing" secondItem="3JF-Uq-hF5" secondAttribute="trailing" constant="20" id="ZiK-r6-oyo"/>
+                                        <constraint firstItem="YpW-l4-YLW" firstAttribute="leading" secondItem="scT-Ar-TZi" secondAttribute="leading" constant="20" id="RPk-c3-tUw"/>
+                                        <constraint firstItem="YpW-l4-YLW" firstAttribute="top" secondItem="scT-Ar-TZi" secondAttribute="top" id="TEe-F0-jrM"/>
                                         <constraint firstItem="LRo-Z1-nA1" firstAttribute="centerY" secondItem="uUW-Fb-NuZ" secondAttribute="centerY" id="d44-Ts-DJF"/>
-                                        <constraint firstItem="3JF-Uq-hF5" firstAttribute="leading" secondItem="scT-Ar-TZi" secondAttribute="leading" constant="20" id="heY-46-pVS"/>
-                                        <constraint firstItem="3JF-Uq-hF5" firstAttribute="trailing" secondItem="WWY-1u-Q14" secondAttribute="trailing" constant="16" id="yds-2T-YdH"/>
+                                        <constraint firstItem="YpW-l4-YLW" firstAttribute="trailing" secondItem="WWY-1u-Q14" secondAttribute="trailing" constant="20" id="fy3-zy-Mgy"/>
+                                        <constraint firstAttribute="bottom" secondItem="YpW-l4-YLW" secondAttribute="bottom" id="ge9-c2-N6E"/>
                                         <constraint firstItem="WWY-1u-Q14" firstAttribute="leading" secondItem="LRo-Z1-nA1" secondAttribute="trailing" constant="16" id="yfI-BO-gsl"/>
-                                        <constraint firstItem="3JF-Uq-hF5" firstAttribute="top" secondItem="scT-Ar-TZi" secondAttribute="top" id="z4a-eB-sqj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="checkBoxButton" destination="uUW-Fb-NuZ" id="AXg-vH-wHH"/>
-                                    <outlet property="containerView" destination="3JF-Uq-hF5" id="gwT-qp-YKD"/>
+                                    <outlet property="containerView" destination="YpW-l4-YLW" id="5V8-wB-0CJ"/>
                                     <outlet property="contentLabel" destination="LRo-Z1-nA1" id="TQQ-PI-9Od"/>
                                     <outlet property="starButton" destination="WWY-1u-Q14" id="vRM-oz-a3L"/>
                                 </connections>
