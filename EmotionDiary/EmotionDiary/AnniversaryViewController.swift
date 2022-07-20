@@ -48,7 +48,7 @@ class AnniversaryViewController: UIViewController {
     
     func configureContainerView() {
         uiViewCollections.forEach{$0.layer.shadowColor = UIColor.black.cgColor}
-        uiViewCollections.forEach{$0.layer.cornerRadius = 25}
+        uiViewCollections.forEach{$0.layer.cornerRadius = 26}
         uiViewCollections.forEach{$0.layer.shadowOffset = .zero}
         uiViewCollections.forEach{$0.layer.shadowOpacity = 0.5}
         uiViewCollections.forEach{$0.layer.shadowRadius = 5}
