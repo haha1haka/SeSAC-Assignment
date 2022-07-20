@@ -14,4 +14,9 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var openingDateLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     
+    func configureCell(data: Movie) {
+        titleLabel.text = data.title
+        openingDateLabel.text = "\(data.releaseDate) | \(data.runtime)"
+        summaryLabel.text = data.overview
+    }
 }
