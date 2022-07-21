@@ -10,7 +10,7 @@ import UIKit
 class BookCollectionViewController: UICollectionViewController {
     
     var booksInfo = BookInfo()
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionViewCell()
@@ -30,6 +30,20 @@ class BookCollectionViewController: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     }
     
+    @IBAction func searchButtonTapped(_ sender: UIBarButtonItem) {
+        
+        let sb = UIStoryboard(name: "BookCollection", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: SearchViewController.identifier) as! SearchViewController
+
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return booksInfo.bookList.count
     }
@@ -42,6 +56,15 @@ class BookCollectionViewController: UICollectionViewController {
         cell.configureCell(data: booksInfo.bookList[indexPath.row])
 
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "BookCollection", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func generateRandomColor() -> UIColor {
